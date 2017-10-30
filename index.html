@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--CSS-->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Font icons -->
+  <link rel="stylesheet" href="iconmoon-fonts/style.css">
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:regular,italic,700,700italic" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <header id="main-header">
+      <div class="top-menu">
+        <div class="header-logo">
+          <a href="#">
+            <img src="http://botanistofficial.com/wp-content/themes/botanist-bass/assets/images/sprite-parts.png" alt="BOTANIST" width="75px"
+              height="55px">
+          </a>
+        </div>
+        <nav class="header-nav">
+          <ul>
+            <li>
+              <a href="#">home</a>
+              <span class="animated-border"></span>
+            </li>
+            <li>
+              <a href="#">about</a>
+              <span class="animated-border"></span>
+            </li>
+            <li>
+              <a href="#">product</a>
+              <span class="animated-border"></span>
+            </li>
+            <li>
+              <a href="#">news</a>
+              <span class="animated-border"></span>
+            </li>
+            <li>
+              <a href="#">faq</a>
+              <span class="animated-border"></span>
+            </li>
+            <li>
+              <a href="#">shop</a>
+              <span class="animated-border"></span>
+            </li>
+            <li>
+              <a href="#">contact</a>
+              <span class="animated-border"></span>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="to-store">
+          <a href="#">
+            <div class="centered">
+              <div class="animated-block transitionEnd">
+                <span class="icon-bag"></span>
+                <p>online store</p>
+              </div>
+              <div class="arrow">
+                <span class="arr-1"></span>
+                <span class="arr-2"></span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="video">
+        <div class="overlay">
+          <div class="animated-scroll">
+            <p>scroll</p>
+            <div class="hide-arrow_block">
+              <div class="arrow">
+                <span class="arr-1"></span>
+                <span class="arr-2"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <iframe src="https://www.youtube.com/embed/e3ghyd26beU?autoplay=1&playlist=e3ghyd26beU&loop=1&controls=0" style="width: 100%; height: 100vh;
+        transform:scale(1.2)" frameborder="0"></iframe>
+      </div>
+    </header>
+    <section id="service">
+      <ul class="service-list">
+
+        <div class="service-item_container">
+          <li class="service-item ">
+            <div class="service-item_img " style="background-image: url(
+        'http://botanistofficial.com/wp-content/uploads/sites/2/2017/10/d12002-141-797120-3.jpg') ">
+            </div>
+            <div class="service-item_description ">
+              <h3>香りを持ち運ぶ「ボタニカルハンドクリーム」12月1 日発売！植物の恵みで手指ふわりと香る、選べる4 種のWフレグランス</h3>
+              <p>
+                <span>news</span>
+                <time>2017.10.18</time>
+              </p>
+            </div>
+          </li>
+        </div>
+
+        <div class="service-item_container">
+          <li class="service-item">
+            <div class="service-item_img" style="background-image: url('http://botanistofficial.com/wp-content/uploads/sites/2/2017/10/d12002-145-639098-0.jpg')">
+            </div>
+            <div class="service-item_description">
+              <h3>「BOTANISTハロウィンイベント2017」10月28,29日 BOTANIST Tokyoにて開催</h3>
+              <p>
+                <span>news</span>
+                <time>2017.10.18</time>
+              </p>
+            </div>
+          </li>
+        </div>
+
+        <div class="service-item_container">
+          <li class="service-item">
+            <div class="service-item_img" style="background-image: url('http://botanistofficial.com/wp-content/uploads/sites/2/2017/10/fv_pc3-840x560.png')">
+            </div>
+            <div class="service-item_description">
+              <h3>総勢150名様に当たる「BOTANISTウィンタースペシャルキャンペーン」開催！</h3>
+              <p>
+                <span>news</span>
+                <time>2017.10.18</time>
+              </p>
+            </div>
+          </li>
+        </div>
+
+        <div class="service-item_container">
+          <li class="service-item">
+            <div class="service-item_img" style="background-image: url('http://botanistofficial.com/wp-content/uploads/sites/2/2017/10/2a3e44c5f69cdff53d1686f4665b497a-840x560.jpg')">
+            </div>
+            <div class="service-item_description">
+              <h3>BOTANIST Tokyo秋の収穫祭！お肌や目元美容に嬉しいスーパーフードや秋野菜たっぷり！ボタニカルなハロウィン限定メニューが登場</h3>
+              <p>
+                <span>news</span>
+                <time>2017.10.18</time>
+              </p>
+            </div>
+          </li>
+        </div>
+
+      </ul>
+    </section>
+  </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script>
+  /* STORE */
+  $('.to-store').hover(function () {
+      $(this).addClass('hovered');
+
+      if ($(this).hasClass('hovered')) {
+
+        if (!$('.animated-block').hasClass('return-content') && $('.animated-block').hasClass('transitionEnd')) {
+          $('.animated-block').removeClass('transitionEnd');
+          $('.animated-block').addClass('store-content_animation');
+          $('.arrow').addClass('arrow-animate');
+          $('.arr-1').addClass('arr-1_animate');
+        }
+
+        $('.animated-block').one('animationend webkitAnimationEnd', function () {
+          $(this).addClass('return-content');
+          $(this).removeClass('store-content_animation');
+        });
+      }
+    },
+    function () {
+      $(this).removeClass('hovered');
+
+      $('.animated-block').on('transitionend webkitTransitionEnd oTransitionEnd', function () {
+        $('.animated-block').addClass('transitionEnd');
+      });
+
+      $(this).one('animationiteration webkitAnimationIteration', function () {
+        if (!$(this).hasClass('hovered')) {
+          $('.arrow').removeClass('arrow-animate');
+          $('.arr-1').removeClass('arr-1_animate');
+          $('.animated-block').removeClass('return-content');
+        }
+      });
+    });
+</script>
+
+</html>

@@ -1,0 +1,349 @@
+  /*Reset styles*/
+
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  ul {
+    list-style: none;
+  }
+  /*Reset styles*/
+  /* Mixin */
+
+  @mixin x-bg-img($size, $repeat, $position) {
+    background-size: $size;
+    background-repeat: $repeat;
+    background-position: $position;
+  }
+  /* Mixin */
+
+  html {
+    font-size: 10px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  #main-header {
+    height: 100vh;
+    margin-bottom: 200px;
+  }
+
+  .top-menu {
+    height: 60px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+  }
+
+  .header-logo {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    overflow: hidden
+  }
+
+  @keyframes moveNavBorder {
+    0% {
+      transform: translateX(-150%);
+    }
+    10% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(150%);
+    }
+  }
+
+  @keyframes moveArrow {
+    80% {
+      transform: translate(150px, -50%);
+    }
+    100% {
+      transform: translate(200%, -50%);
+    }
+  }
+
+  @keyframes resizeArr {
+    55% {
+      width: 70px;
+    }
+    100% {
+      width: 70px;
+    }
+  }
+
+  @keyframes moveArrow2 {
+    80% {
+      transform: translateX(80px);
+    }
+    100% {
+      transform: translateX(200%);
+    }
+  }
+
+  @keyframes resizeArr2 {
+    55% {
+      width: 100px;
+    }
+    100% {
+      width: 100px;
+    }
+  }
+
+  @keyframes moveStoreContent {
+    70% {
+      transform: translateX(200%);
+      visibility: hidden;
+    }
+    100% {
+      visibility: hidden;
+      transform: translateX(-200%);
+    }
+  }
+
+  .return-content {
+    transform: translateX(-200%);
+  }
+
+  .store-content_animation {
+    animation: moveStoreContent 0.3s forwards;
+  }
+
+  .header-nav {
+    height: 100%;
+    margin: 0 auto;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    ul {
+      display: flex;
+      height: 100%;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+      margin: 0 15px;
+      position: relative;
+      text-transform: uppercase;
+      overflow: hidden;
+      cursor: pointer;
+      transition: 0.3s;
+      .animated-border {
+        display: block;
+        width: 100%;
+        background: #000;
+        height: 1px;
+        position: absolute;
+        transform: translateX(-101%);
+        bottom: 30%;
+      }
+      &:hover .animated-border {
+        display: block;
+        width: 100%;
+        background: #000;
+        height: 1px;
+        animation: moveNavBorder 1s infinite;
+      }
+    }
+  }
+
+  .to-store {
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    background-color: #000;
+    .arrow-animate {
+      animation: moveArrow 1.5s infinite cubic-bezier(0.005, .999, 0.900, 0.030);
+    }
+    .arr-1_animate {
+      animation: resizeArr 1.5s infinite;
+    }
+    a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+    }
+    .centered {
+      margin: auto;
+      text-align: center;
+    }
+    .animated-block {
+      transition: 0.3s;
+    }
+    .icon-bag {
+      margin-bottom: 15px;
+      display: block;
+      &::before {
+        content: "\e900";
+        font-size: 35px;
+        color: #fff;
+      }
+    }
+    .arrow {
+      height: 20px;
+      width: 300px;
+      position: absolute;
+      transform: translate(-200%, -50%);
+      top: 50%;
+      transition: 1s;
+      .arr-1 {
+        display: block;
+        width: inherit;
+        height: 1px;
+        background: #fff;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+      .arr-2 {
+        display: block;
+        width: 15px;
+        height: 1px;
+        background: #fff;
+        transform: rotate(25deg);
+        position: absolute;
+        bottom: 3px;
+        right: 0;
+      }
+    }
+    p {
+      font-family: Roboto, sans-serif;
+      font-size: 1.6rem;
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+
+  .video {
+    margin-bottom: 150px;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: -100;
+    .overlay {
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .animated-scroll {
+    position: absolute;
+    bottom: 120px;
+    left: -25px;
+    display: flex;
+    overflow: hidden;
+    transform: rotate(90deg);
+    p {
+      margin-right: 15px;
+      color: #fff;
+      font-family: Roboto, sans-serif;
+      font-weight: 500;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+    }
+    .hide-arrow_block {
+      overflow: hidden;
+    }
+    .arrow {
+      height: 20px;
+      width: 100px;
+      transition: 1s;
+      transform: translateX(-110%);
+      animation: moveArrow2 1.7s infinite cubic-bezier(0.020, 0.920, 1.000, 0.120);
+      .arr-1 {
+        display: block;
+        width: inherit;
+        height: 1px;
+        background: #fff;
+        position: absolute;
+        right: 0;
+        bottom: 50%;
+      }
+      .arr-2 {
+        display: block;
+        width: 10px;
+        height: 1px;
+        background: #fff;
+        transform: rotate(25deg);
+        position: absolute;
+        bottom: 62%;
+        right: 0;
+      }
+    }
+  }
+  /* Service */
+
+  .service-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .service-item_container {
+    flex-grow: 1;
+    width: 25%;
+    cursor: pointer;
+    
+    &:hover .service-item {
+      transform: translateY(-10%);
+    }
+
+    &:hover .service-item::before {
+      box-shadow: 8px 8px 50px #9F9F9F;
+    }
+  }
+
+  .service-item {
+    position: relative;
+    transition: 0.3s;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+    }
+   
+    .service-item_img {
+      @include x-bg-img(cover, no-repeat, center);
+      height: 300px;
+    }
+    .service-item_description {
+      padding: 25px 25px 0;
+    }
+    h3 {
+      font-family: 'Noto Sans';
+      font-weight: 400;
+      margin-bottom: 10px;
+      font-size: 1.6rem;
+    }
+    p {
+      color: #9F9F9F;
+      font-size: 1.2rem;
+      span {
+        border: 1px solid #9F9F9F;
+        border-radius: 5px;
+      }
+    }
+  }

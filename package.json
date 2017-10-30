@@ -1,0 +1,19 @@
+{
+  "name": "landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-plumber": "^1.1.0"
+  }
+}
