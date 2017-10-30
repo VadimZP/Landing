@@ -73,7 +73,7 @@
           </a>
         </div>
       </div>
-      <div class="video">
+       <div class="video">
         <div class="overlay">
           <div class="animated-scroll">
             <p>scroll</p>
@@ -96,6 +96,7 @@
           <li class="service-item ">
             <div class="service-item_img " style="background-image: url(
         'http://botanistofficial.com/wp-content/uploads/sites/2/2017/10/d12002-141-797120-3.jpg') ">
+              <div class="service-item_img_overlay"></div>
             </div>
             <div class="service-item_description ">
               <h3>香りを持ち運ぶ「ボタニカルハンドクリーム」12月1 日発売！植物の恵みで手指ふわりと香る、選べる4 種のWフレグランス</h3>
@@ -110,6 +111,7 @@
         <div class="service-item_container">
           <li class="service-item">
             <div class="service-item_img" style="background-image: url('http://botanistofficial.com/wp-content/uploads/sites/2/2017/10/d12002-145-639098-0.jpg')">
+              <div class="service-item_img_overlay"></div>
             </div>
             <div class="service-item_description">
               <h3>「BOTANISTハロウィンイベント2017」10月28,29日 BOTANIST Tokyoにて開催</h3>
@@ -124,6 +126,7 @@
         <div class="service-item_container">
           <li class="service-item">
             <div class="service-item_img" style="background-image: url('http://botanistofficial.com/wp-content/uploads/sites/2/2017/10/fv_pc3-840x560.png')">
+              <div class="service-item_img_overlay"></div>
             </div>
             <div class="service-item_description">
               <h3>総勢150名様に当たる「BOTANISTウィンタースペシャルキャンペーン」開催！</h3>
@@ -138,6 +141,7 @@
         <div class="service-item_container">
           <li class="service-item">
             <div class="service-item_img" style="background-image: url('http://botanistofficial.com/wp-content/uploads/sites/2/2017/10/2a3e44c5f69cdff53d1686f4665b497a-840x560.jpg')">
+              <div class="service-item_img_overlay"></div>
             </div>
             <div class="service-item_description">
               <h3>BOTANIST Tokyo秋の収穫祭！お肌や目元美容に嬉しいスーパーフードや秋野菜たっぷり！ボタニカルなハロウィン限定メニューが登場</h3>
@@ -157,7 +161,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 <script>
-  /* STORE */
+  /* STORE ANIMATION*/
   $('.to-store').hover(function () {
       $(this).addClass('hovered');
 
@@ -191,6 +195,18 @@
         }
       });
     });
+
+  /* SERVICE ANIMATION */
+  $(window).scroll(function () {
+
+    if ($('.service-item_container')[0].getBoundingClientRect().y < 620 && !$('.service-item_container').hasClass(
+        'shown')) {
+      $('.service-item_img').addClass('shown');
+      $('.service-item_img').on('transitionend', function () {
+        $('.service-item_img_overlay').addClass('shown');
+      })
+    }
+  });
 </script>
 
 </html>
