@@ -1,0 +1,86 @@
+@keyframes moveNavBorder {
+  0% {
+    transform: translateX(-150%);
+  }
+  10% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+@keyframes moveArrow {
+  80% {
+    transform: translate(50%, -50%);
+  }
+  100% {
+    transform: translate(200%, -50%);
+  }
+}
+
+@keyframes resizeArr {
+  55% {
+    width: 70px;
+  }
+  100% {
+    width: 70px;
+  }
+}
+
+@keyframes moveArrow2 {
+  80% {
+    transform: translateX(80px);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes moveArrow3 {
+  50% {
+    visibility: hidden;
+
+    transform: translateX(200%);
+  }
+  60% {
+    visibility: hidden;
+
+    transform: translateX(-90%);
+  }
+}
+
+@keyframes moveArrow4 {
+  20% {
+    visibility: hidden;
+
+    transform: translateX(200%);
+  }
+  30% {
+    visibility: hidden;
+
+    transform: translateX(-90%);
+  }
+}
+
+@keyframes resizeArr2 {
+  90% {
+    width: 300px;
+  }
+  100% {
+    width: 100px;
+  }
+}
+
+@keyframes moveStoreContent {
+  70% {
+    visibility: hidden;
+
+    transform: translateX(200%);
+  }
+  100% {
+    visibility: hidden;
+
+    transform: translateX(-200%);
+  }
+}

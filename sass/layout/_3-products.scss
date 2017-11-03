@@ -1,0 +1,116 @@
+/* Products */
+.products-item {
+  position: relative;
+  figure {
+    img {
+      display: block;
+
+      width: 70vw;
+      max-height: 100%;
+    }
+  }
+  .product-item_description {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+
+    width: 30%;
+
+    transform: translateY(-50%);
+    h2 {
+      margin-bottom: 60px;
+
+      font-weight: 100;
+      font-size: 8vw;
+      font-family: Roboto, sans-serif;
+
+      text-transform: uppercase;
+    }
+    p {
+      margin-bottom: 110px;
+
+      font-weight: 500;
+      font-size: 1.2vw;
+      font-family: 'Noto Sans';
+    }
+    .product-item_about {
+      overflow: hidden;
+
+      width: 30vw;
+      height: 90px;
+      padding-left: 50px;
+
+      color: $white;
+
+      cursor: pointer;
+      background: $black;
+      &:hover .animated-block {
+        animation: moveArrow4 2s infinite cubic-bezier(0.155, 0.235, 0.295, 0.685);
+        ;
+      }
+      &:hover .about-product_arrow {
+        animation: resizeArr2 2s infinite;
+      }
+      span {
+        font-weight: 500;
+        font-size: 1.8rem;
+        font-family: Roboto, sans-serif;
+
+        text-transform: uppercase;
+      }
+    }
+  }
+  &:nth-of-type(2n) {
+    figure {
+      display: flex;
+
+      flex-direction: column;
+      img {
+        align-self: flex-end;
+      }
+    }
+    .product-item_description {
+      top: 50%;
+      left: 5%;
+    }
+  }
+  .animated-block {
+    display: flex;
+
+    height: 100%;
+
+    align-items: center;
+  }
+  .about-product_arrow {
+    position: relative;
+
+    width: 100px;
+    height: 100%;
+    margin-left: 15px;
+    .arr-1 {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 50%;
+
+      width: inherit;
+      height: 1px;
+
+      background: $white;
+    }
+    .arr-2 {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 54%;
+
+      width: 15px;
+      height: 1px;
+
+      background: $white;
+      transform: rotate(25deg);
+    }
+  }
+}
+
+/* Products */

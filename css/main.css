@@ -227,36 +227,56 @@ body {
             transform: translateX(200%); } }
 
 @-webkit-keyframes moveArrow3 {
+  50% {
+    visibility: hidden;
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%); }
   60% {
     visibility: hidden;
-    -webkit-transform: translateX(110%);
-            transform: translateX(110%); }
-  80% {
-    visibility: hidden;
-    -webkit-transform: translateX(-110%);
-            transform: translateX(-110%); } }
+    -webkit-transform: translateX(-90%);
+            transform: translateX(-90%); } }
 
 @keyframes moveArrow3 {
+  50% {
+    visibility: hidden;
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%); }
   60% {
     visibility: hidden;
-    -webkit-transform: translateX(110%);
-            transform: translateX(110%); }
-  80% {
+    -webkit-transform: translateX(-90%);
+            transform: translateX(-90%); } }
+
+@-webkit-keyframes moveArrow4 {
+  20% {
     visibility: hidden;
-    -webkit-transform: translateX(-110%);
-            transform: translateX(-110%); } }
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%); }
+  30% {
+    visibility: hidden;
+    -webkit-transform: translateX(-90%);
+            transform: translateX(-90%); } }
+
+@keyframes moveArrow4 {
+  20% {
+    visibility: hidden;
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%); }
+  30% {
+    visibility: hidden;
+    -webkit-transform: translateX(-90%);
+            transform: translateX(-90%); } }
 
 @-webkit-keyframes resizeArr2 {
-  85% {
+  90% {
     width: 300px; }
   100% {
-    width: 300px; } }
+    width: 100px; } }
 
 @keyframes resizeArr2 {
-  85% {
+  90% {
     width: 300px; }
   100% {
-    width: 300px; } }
+    width: 100px; } }
 
 @-webkit-keyframes moveStoreContent {
   70% {
@@ -621,11 +641,11 @@ body {
       cursor: pointer;
       background: #000; }
       .products-item .product-item_description .product-item_about:hover .animated-block {
-        -webkit-animation: moveArrow3 2s infinite cubic-bezier(0.005, 0.999, 0.9, 0.03);
-                animation: moveArrow3 2s infinite cubic-bezier(0.005, 0.999, 0.9, 0.03); }
+        -webkit-animation: moveArrow4 2s infinite cubic-bezier(0.155, 0.235, 0.295, 0.685);
+                animation: moveArrow4 2s infinite cubic-bezier(0.155, 0.235, 0.295, 0.685); }
       .products-item .product-item_description .product-item_about:hover .about-product_arrow {
-        -webkit-animation: resizeArr2 1.8s infinite;
-                animation: resizeArr2 1.8s infinite; }
+        -webkit-animation: resizeArr2 2s infinite;
+                animation: resizeArr2 2s infinite; }
       .products-item .product-item_description .product-item_about span {
         font-weight: 500;
         font-size: 1.8rem;

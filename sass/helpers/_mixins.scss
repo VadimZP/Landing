@@ -1,0 +1,16 @@
+/* Mixins */
+
+@mixin x-bg-img($size, $repeat, $position) {
+  background-size: $size;
+  background-repeat: $repeat;
+  background-position: $position;
+}
+
+@mixin x-font($family, $size, $weight) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+
+/* Mixins */

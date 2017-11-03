@@ -1,0 +1,160 @@
+/* Service */
+
+#service {
+  margin-bottom: 100px;
+}
+
+.service-item.service-item_img.shown {
+  width: 100%;
+}
+
+.service-list {
+  display: flex;
+
+  width: 100%;
+  margin-bottom: 50px;
+
+  justify-content: center;
+}
+
+.service-item_container {
+  width: 25%;
+
+  flex-grow: 1;
+  cursor: pointer;
+  &:hover .service-item {
+    transform: translateY(-10%);
+  }
+  &:hover .service-item::before {
+    box-shadow: 8px 8px 50px $light-grey;
+  }
+}
+
+.service-item {
+  position: relative;
+
+  transition: 0.3s;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    content: '';
+  }
+  .service-item_img {
+    position: relative;
+    overflow: hidden;
+
+    width: 0;
+    height: 300px;
+
+    @include x-bg-img(cover, no-repeat, center);
+    transition: 1s;
+  }
+  .service-item_img.shown {
+    width: 100%;
+  }
+  .service-item_img_overlay {
+    position: absolute;
+
+    width: 100%;
+    height: inherit;
+
+    background-color: rgba(225, 225, 225, 0.7);
+    transition: 1s;
+  }
+  .service-item_img_overlay.shown {
+    transform: translateX(200%);
+  }
+  .service-item_description {
+    padding: 25px;
+  }
+  h3 {
+    margin-bottom: 10px;
+
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-family: 'Noto Sans';
+  }
+  p {
+    font-size: 1.2rem;
+    font-family: 'Noto Sans';
+    color: $light-grey;
+    span {
+      margin-right: 5px;
+      padding: 1px 2px;
+
+      font-size: 1rem;
+
+      text-transform: uppercase;
+
+      border: 1px solid $light-grey;
+      border-radius: 3px;
+    }
+  }
+}
+
+.to-news_container {
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+.to-news {
+  display: flex;
+  overflow: hidden;
+
+  margin-right: 50px;
+
+  cursor: pointer;
+  a {
+    margin-right: 15px;
+
+    font-weight: 500;
+    font-size: 1.8rem;
+    font-family: Roboto, sans-serif;
+
+    text-transform: uppercase;
+  }
+  .overflow-hidden_block {
+    overflow: hidden;
+  }
+  .to-news_arrow-animate {
+    animation: moveArrow3 1.2s infinite;
+  }
+  .to-news_arrow {
+    position: relative;
+    overflow: hidden;
+
+    width: 50px;
+    height: 100%;
+    .arr-1 {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 50%;
+
+      width: 100px;
+      height: 1px;
+
+      background: $black;
+    }
+    .arr-2 {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 65%;
+
+      width: 15px;
+      height: 1px;
+
+      background: $black;
+      transform: rotate(25deg);
+    }
+  }
+}
+
+/* Service */
