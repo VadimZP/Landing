@@ -237,11 +237,11 @@ body {
 }
 
 @keyframes resizeArr2 {
-  55% {
-    width: 100px;
+  85% {
+    width: 300px;
   }
   100% {
-    width: 100px;
+    width: 300px;
   }
 }
 
@@ -632,11 +632,12 @@ body {
   position: relative;
   figure {
     img {
+      display: block;
+
       width: 70vw;
       max-height: 100%;
     }
   }
-
 
   .product-item_description {
     position: absolute;
@@ -644,7 +645,6 @@ body {
     right: 5%;
 
     width: 30%;
-    margin-bottom: 110px;
 
     transform: translateY(-50%);
     h2 {
@@ -657,9 +657,39 @@ body {
       text-transform: uppercase;
     }
     p {
+      margin-bottom: 110px;
+
       font-weight: 500;
       font-size: 1.2vw;
       font-family: 'Noto Sans';
+    }
+
+    .product-item_about {
+      overflow: hidden;
+
+      width: 30vw;
+      height: 90px;
+      padding-left: 50px;
+
+      color: #fff;
+
+      cursor: pointer;
+      background: #000;
+
+      &:hover .animated-block {
+        animation: moveArrow3 2s infinite cubic-bezier(0.005, 0.999, 0.900, 0.030);
+      } 
+      &:hover .about-product_arrow {
+        animation: resizeArr2 1.8s infinite;
+      }
+
+      span {
+        font-weight: 500;
+        font-size: 1.8rem;
+        font-family: Roboto, sans-serif;
+
+        text-transform: uppercase;
+      }
     }
   }
   &:nth-of-type(2n) {
@@ -674,6 +704,47 @@ body {
     .product-item_description {
       top: 50%;
       left: 5%;
+    }
+  }
+
+
+  .animated-block {
+    display: flex;
+
+    height: 100%;
+
+    align-items: center;
+  }
+
+  .about-product_arrow {
+    position: relative;
+
+    width: 100px;
+    height: 100%;
+    margin-left: 15px;
+
+    .arr-1 {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 50%;
+
+      width: inherit;
+      height: 1px;
+
+      background: #fff;
+    }
+    .arr-2 {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 54%;
+
+      width: 15px;
+      height: 1px;
+
+      background: #fff;
+      transform: rotate(25deg);
     }
   }
 }
