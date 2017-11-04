@@ -2,18 +2,24 @@
 
 const gulp = require("gulp");
 const sass = require("gulp-sass");
+const sassImport = require("gulp-sass-import");
 const browserSync = require("browser-sync");
 const autoprefixer = require("gulp-autoprefixer");
 const plumber = require('gulp-plumber');
 
 gulp.task("sass", function () {
     return gulp.src("./sass/**/*.scss")
+        .pipe(sassImport({
+            filename: '_file',
+            marker: './*'
+        }))
         .pipe(plumber())
         .pipe(sass({
             errLogToConsole: true
         }))
         .on('error', catchErr)
         .pipe(autoprefixer())
+
         .pipe(gulp.dest("./css"))
         .pipe(browserSync.reload({
             stream: true

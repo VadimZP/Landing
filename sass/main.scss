@@ -1,28 +1,9 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-html {
-  font-size: 10px;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
-}
-
-.container {
-  width: 100%;
-}
-
-
-
-
+@import './base/reset';
+@import './helpers/variables';
+@import './helpers/mixins';
+@import './layout/1-header';
+@import './layout/2-service';
+@import './layout/3-products';
+@import './components/animation'
