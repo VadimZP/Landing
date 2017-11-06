@@ -56,21 +56,26 @@
 
     transform: translateX(200%);
   }
-  30% {
+  80% {
     visibility: hidden;
+
+    transform: translateX(-90%);
+  }
+  100% {
+    visibility: visible;
 
     transform: translateX(-90%);
   }
 }
 
-@keyframes resizeArr2 {
+/* @keyframes resizeArr2 {
   90% {
     width: 300px;
   }
   100% {
     width: 100px;
   }
-}
+} */
 
 @keyframes moveStoreContent {
   70% {
@@ -83,4 +88,19 @@
 
     transform: translateX(-200%);
   }
+}
+
+.move-product-right {
+  transform: translateX(100%);
+  visibility: hidden;
+}
+
+.move-product-left {
+  transform: translateX(-100%) ;
+  visibility: hidden;
+}
+
+.return-product {
+  transform: translateX(0%);
+  visibility: visible;
 }

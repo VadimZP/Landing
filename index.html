@@ -177,7 +177,7 @@
           <h2>hair care</h2>
           <p>整髪料や頭皮のマッサージなどで傷んだ髪を回復させたり、ダメージを予防することを目的としたアイテムです。</p>
           <div class="product-item_about">
-            <div class="animated-block">
+            <div class="animated-block__product">
               <span>more</span>
               <div class="about-product_arrow">
                 <span class="arr-1"></span>
@@ -195,7 +195,7 @@
           <h2>body care</h2>
           <p>整髪料や頭皮のマッサージなどで傷んだ髪を回復させたり、ダメージを予防することを目的としたアイテムです。</p>
           <div class="product-item_about">
-            <div class="animated-block">
+            <div class="animated-block__product">
               <span>more</span>
               <div class="about-product_arrow">
                 <span class="arr-1"></span>
@@ -213,7 +213,7 @@
           <h2>goods</h2>
           <p>整髪料や頭皮のマッサージなどで傷んだ髪を回復させたり、ダメージを予防することを目的としたアイテムです。</p>
           <div class="product-item_about">
-            <div class="animated-block">
+            <div class="animated-block__product">
               <span>more</span>
               <div class="about-product_arrow">
                 <span class="arr-1"></span>
@@ -296,6 +296,41 @@
         }
       });
     })
+
+  /* Product animation */
+
+  let interval;
+
+  $('.product-item_about').hover(function () {
+    loopAnim.call($('.animated-block__product'));
+
+    interval = setInterval(loopAnim.bind($('.animated-block__product')), 1500);
+
+  }, function () {
+    $('.animated-block__product').off('transitionend')
+
+    clearInterval(interval);
+
+    $('.animated-block__product')
+        .removeClass('move-product-right move-product-left return-product');
+  });
+
+  function loopAnim() {
+    $(this).addClass('move-product-right');
+
+    $(this).one('transitionend', function () {
+      $(this).addClass('move-product-left');
+
+      $(this).on('transitionend', function (e) {
+        if (e.originalEvent.propertyName === 'transform') {
+          $(this).addClass('return-product');
+        }
+        if($(this).hasClass('return-product')) {
+          $(this).removeClass('move-product-right move-product-left return-product');
+        }
+      });
+    });
+  }
 </script>
 
 </html>

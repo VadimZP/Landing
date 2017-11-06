@@ -44,12 +44,11 @@
 
       cursor: pointer;
       background: $black;
-      &:hover .animated-block {
-        animation: moveArrow4 2s infinite cubic-bezier(0.155, 0.235, 0.295, 0.685);
-        ;
+      &:hover .animated-block__product {
+        // animation: moveArrow4 2s forwards cubic-bezier(0.155, 0.235, 0.295, 0.685);
       }
       &:hover .about-product_arrow {
-        animation: resizeArr2 2s infinite;
+        // animation: resizeArr2 1.8s infinite;
       }
       span {
         font-weight: 500;
@@ -74,12 +73,13 @@
       left: 5%;
     }
   }
-  .animated-block {
+  .animated-block__product {
     display: flex;
 
     height: 100%;
 
     align-items: center;
+    transition: .5s;
   }
   .about-product_arrow {
     position: relative;
